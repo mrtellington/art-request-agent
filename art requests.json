@@ -1,0 +1,2587 @@
+{
+  "data" : [ {
+    "gid" : "1212520654744774",
+    "actual_time_minutes" : 119,
+    "assignee" : {
+      "gid" : "1209482615978799",
+      "name" : "Mary Lang",
+      "resource_type" : "user"
+    },
+    "assignee_status" : "inbox",
+    "completed" : true,
+    "completed_at" : "2025-12-29T16:21:34.433Z",
+    "created_at" : "2025-12-18T18:21:47.223Z",
+    "custom_fields" : [ {
+      "gid" : "1211551541910237",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551541910239",
+        "color" : "hot-pink",
+        "enabled" : true,
+        "name" : "Creative Design Services",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910242",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "PPTX",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910243",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Proofs",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910244",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Sneak Peek",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Request",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Mockup",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058961",
+      "enabled" : true,
+      "name" : "Client",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Inkey",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "Inkey",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1211551542058970",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058971",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Yes",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058972",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "No",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Billable",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058988",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058990",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "$50k-$250k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058991",
+        "color" : "red",
+        "enabled" : true,
+        "name" : ">$250k",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Value",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "<$50k",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1209588204727028",
+      "enabled" : true,
+      "name" : "Estimated time",
+      "description" : "Asana-created. Estimate time to complete a task.",
+      "number_value" : null,
+      "precision" : 0,
+      "created_by" : null,
+      "display_value" : null,
+      "resource_subtype" : "number",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "number"
+    }, {
+      "gid" : "1211701715737841",
+      "enabled" : true,
+      "name" : "Google Folder",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "https://drive.google.com/drive/folders/1a_kEowb9Cr2D6xfJyLS8zhVXEn2VguM1",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "https://drive.google.com/drive/folders/1a_kEowb9Cr2D6xfJyLS8zhVXEn2VguM1",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1210695790941177",
+      "enabled" : true,
+      "name" : "Project#",
+      "description" : "Project in commonsku",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Estimate #75715",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "Estimate #75715",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1212310605793914",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1212310605793915",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "US",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793916",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "CAD",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793917",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "EU",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793918",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "UK",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793919",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "APAC",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Region",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    } ],
+    "due_at" : "2025-12-29T19:00:00.000Z",
+    "due_on" : "2025-12-29",
+    "followers" : [ {
+      "gid" : "1208461833471002",
+      "name" : "Tod Ellington",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1208642384045428",
+      "name" : "Ryan Wilson",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1209482615978799",
+      "name" : "Mary Lang",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1208917511521972",
+      "name" : "Hope Luria",
+      "resource_type" : "user"
+    } ],
+    "hearted" : false,
+    "hearts" : [ ],
+    "liked" : false,
+    "likes" : [ ],
+    "memberships" : [ {
+      "project" : {
+        "gid" : "1211223909834951",
+        "name" : "Art Requests",
+        "resource_type" : "project"
+      },
+      "section" : {
+        "gid" : "1211223581369189",
+        "name" : "Pending Approval",
+        "resource_type" : "section"
+      }
+    } ],
+    "modified_at" : "2025-12-29T16:21:36.161Z",
+    "name" : "Mockup | Inkey | MOCK UP | The Inkey List | 2026 GWP Ideas",
+    "notes" : "Client Type\nClient\n\nMockup Type\nWhitestone Template\n\nPertinent Information:\nFeel free to get creative with the mock ups but one thing to note - we can no longer use “No BS, Just Better Skin” on anything so all inspo/designs will just need to be our INKEY logo. \n\nWebsite & Social Media Inspiration:\n\n\nProduct Info:\n/Make Up Remover w/ Woven Label\n• Color: white/black\n• Imprint Method: woven label\n• Imprint Color: white\n• Location: 1\n• Size: n/a\n• Link: https://drive.google.com/file/d/1u_GkavXJK4_VQkHkMQHBACvbhIS41cfK/view?usp=drive_link\n• Notes: Please include this item as is\nSoft Enamel Charm Keychain\n• Color: silver/full color\n• Imprint Method: full color\n• Imprint Color: black\n• Location: full color\n• Size: n/a\n• Link: https://drive.google.com/file/d/1hfTmCa3m--EP5estGaCtNLjuJoAwlxaK/view?usp=sharing\n• Notes: Would love to explore a design with our exosome serum and one charm with INKEY logo - https://www.theinkeylist.com/products/exosome-hydro-glow-complex?currency=USD&variant=44509556048072&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=63717ce8f004&utm_source=google&utm_medium=cpc&tw_source=google&tw_adid=722273168782&tw_campaign=21930180377&gad_source=1&gad_campaignid=21930180377&gbraid=0AAAAACcldJ0SDFIMakP6mbFe24SvV1GNu&gclid=Cj0KCQiA6Y7KBhCkARIsAOxhqtOqKYuFnad0uHc2C0zEHYuRkaIP6SghMaVknlBIAqelT86NABdvjyIaAozVEALw_wcB\nFuzzy Spa Head Wrap\n• Color: black\n• Imprint Method: woven label\n• Imprint Color: white\n• Location: on the side\n• Size: tiny!\n• Link: https://www.niraskin.com/products/nira-signature-spa-headband?variant=41158717734948&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&tw_source=google&tw_adid=786758870803&tw_campaign=23331198148&tw_kwdid=pla-293946777986&gad_source=1&gad_campaignid=23331198148&gbraid=0AAAAAC0BsqmStM_X2rfgKZ-_jGLgq2l9M&gclid=Cj0KCQiA6Y7KBhCkARIsAOxhqtNmvQINW1H2n-txsyBuufZBTtzS1WCCodrrvsuDo3bS3Tu7K9824GAaApYjEALw_wcB\n• Notes: with a small woven label on the left side\nCanvas Tote Bag\n• Color: natural/black handles\n• Imprint Method: screen print\n• Imprint Color: black\n• Location: 1 side\n• Size: 5-6\"w\n• Link: https://www.ssactivewear.com/p/liberty_bags/8868\n• Notes: INKEY logo in black on 1 side\nJelly Tote Bag\n• Color: black\n• Imprint Method: pad print\n• Imprint Color: white\n• Location: 1\n• Size: 5-6\"w\n• Link: https://www.amazon.com/TotePrint-Holographic-Bags-Clear-Waterproof-B115-D2148-299-1/dp/B0F7LCFC1Y/ref=sr_1_12?adgrpid=192168310728&dib=eyJ2IjoiMSJ9.LvpXr6trnVEKZH-VSNDjuFyUbP_F0NDLQ33CfrZ46_NJPvT_KNHg1lu3xTe-LL6k4ho1VMZXwMOVz0fN3RA5y1XvhDFjXKoIfxjSybAu4xs5JHJBL7AJ0P9pd8xaDq9hXcuKf3t41gq-bDFk3_p9b09-h0E7Od-rfoPcD-2IhtBYstUkgSnJJvYmNrWHvwtbGVRspTsmy5Gy8GpnwVjFvWgFe0pKtJMrBbY9E11ngnESVZc_7zHoYGbVGhV_WzI97J5E8Z8cW9QzMKToyQieR8ugk0a4L1T9arG_OjaiUzU.vx_dCj6PXzn48bJF8R9Z-YnDecs16QnilTt9RdRcx_c&dib_tag=se&hvadid=779602749987&hvdev=c&hvexpln=0&hvlocphy=9028223&hvnetw=g&hvocijid=15960202265729272760--&hvqmt=e&hvrand=15960202265729272760&hvtargid=kwd-324925942544&hydadcr=24665_13611781_8293&keywords=jelly+tote&mcid=9f91ada8e55c361c89946721e654a634&qid=1766081330&sr=8-12\n• Notes: please also do a mock up in clear and a white (thinking like a milky/cloudy white pvc) with a black logo\n\nBeaded Bracelet\n• Color: black and white beads\n• Imprint Method: n/a - beads\n• Imprint Color: white and black\n• Location: n/a\n• Size: \n• Link: https://hpgbrands.com/bfrbr02/custom-beaded-friendship-bracelet/#__bulk-Standard-usd\n• Notes: phrase- INKEY on it maybe in just black and white beads\nCompact Mirror\n• Color: Black\n• Imprint Method:pad print\n• Imprint Color: white\n• Location: 1\n• Size: 1.625″\n• Link: https://hpgbrands.com/pc04cm/kelly-compact-mirror/#__bulk-Standard-usd\n• Notes: \nSoft Enamel Lapel Pins\n• Color: full color - white and black\n• Imprint Method: full color\n• Imprint Color: white and black\n• Location: 1 side\n• Size: 1\"x1\"\n• Link: https://hpgbrands.com/dsse3/diestruck-soft-enamel-lapel-pins-1-w-x-1-h/\n• Notes: they would like to create a lapel pin of this serum - https://www.theinkeylist.com/products/exosome-hydro-glow-complex?currency=USD&variant=44509556048072&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=63717ce8f004&utm_source=google&utm_medium=cpc&tw_source=google&tw_adid=722273168782&tw_campaign=21930180377&gad_source=1&gad_campaignid=21930180377&gbraid=0AAAAACcldJ0SDFIMakP6mbFe24SvV1GNu&gclid=Cj0KCQiA6Y7KBhCkARIsAOxhqtO5YIKoorS9Naj6Aglg0Mm2Rp-e4kwnOwVx_O34ZRZetG5gtRwaOVwaAiD9EALw_wcB\nPosh Clear Wristlet Pouch\n• Color: Clear and black trim/patch\n• Imprint Method:  screen print on patch\n• Imprint Color: white\n• Location: on patch\n• Size: about 1\"\n• Link: https://drive.google.com/file/d/123tl6ZNvvbnXkDSfYnNzYJNkRxhKs2eO/view?usp=drive_link\n• Notes: the image i uploaded was a discontinued product from HIT. we will be producing it overseas now",
+    "num_hearts" : 0,
+    "num_likes" : 0,
+    "parent" : null,
+    "permalink_url" : "https://app.asana.com/1/1201405786124364/project/1211223909834951/task/1212520654744774",
+    "projects" : [ {
+      "gid" : "1211223909834951",
+      "name" : "Art Requests",
+      "resource_type" : "project"
+    } ],
+    "resource_type" : "task",
+    "start_at" : null,
+    "start_on" : null,
+    "subtasks" : [ ],
+    "tags" : [ {
+      "gid" : "1209208460622413",
+      "name" : "Needs Creative",
+      "resource_type" : "tag"
+    } ],
+    "resource_subtype" : "default_task",
+    "workspace" : {
+      "gid" : "1201405786124364",
+      "name" : "Whitestone",
+      "resource_type" : "workspace"
+    }
+  }, {
+    "gid" : "1212503961045093",
+    "actual_time_minutes" : 39,
+    "assignee" : {
+      "gid" : "1209482615978799",
+      "name" : "Mary Lang",
+      "resource_type" : "user"
+    },
+    "assignee_status" : "inbox",
+    "completed" : true,
+    "completed_at" : "2025-12-19T16:22:57.265Z",
+    "created_at" : "2025-12-17T18:35:35.641Z",
+    "custom_fields" : [ {
+      "gid" : "1211551541910237",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551541910239",
+        "color" : "hot-pink",
+        "enabled" : true,
+        "name" : "Creative Design Services",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910242",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "PPTX",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910243",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Proofs",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910244",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Sneak Peek",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Request",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Mockup",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058961",
+      "enabled" : true,
+      "name" : "Client",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "SiriusXM",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "SiriusXM",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1211551542058970",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058971",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Yes",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058972",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "No",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Billable",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058988",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058990",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "$50k-$250k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058991",
+        "color" : "red",
+        "enabled" : true,
+        "name" : ">$250k",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Value",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "<$50k",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1209588204727028",
+      "enabled" : true,
+      "name" : "Estimated time",
+      "description" : "Asana-created. Estimate time to complete a task.",
+      "number_value" : null,
+      "precision" : 0,
+      "created_by" : null,
+      "display_value" : null,
+      "resource_subtype" : "number",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "number"
+    }, {
+      "gid" : "1211701715737841",
+      "enabled" : true,
+      "name" : "Google Folder",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "https://drive.google.com/drive/folders/1C7aBmCWtaelK-8spYc-A3PKyjUldOQol",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "https://drive.google.com/drive/folders/1C7aBmCWtaelK-8spYc-A3PKyjUldOQol",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1210695790941177",
+      "enabled" : true,
+      "name" : "Project#",
+      "description" : "Project in commonsku",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "43030",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "43030",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1212310605793914",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1212310605793915",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "US",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793916",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "CAD",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793917",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "EU",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793918",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "UK",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793919",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "APAC",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Region",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    } ],
+    "due_at" : "2025-12-19T18:00:00.000Z",
+    "due_on" : "2025-12-19",
+    "followers" : [ {
+      "gid" : "1208461833471002",
+      "name" : "Tod Ellington",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1208717202115152",
+      "name" : "Aloe",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1208917511521972",
+      "name" : "Hope Luria",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1209482615978799",
+      "name" : "Mary Lang",
+      "resource_type" : "user"
+    } ],
+    "hearted" : false,
+    "hearts" : [ ],
+    "liked" : false,
+    "likes" : [ ],
+    "memberships" : [ {
+      "project" : {
+        "gid" : "1211223909834951",
+        "name" : "Art Requests",
+        "resource_type" : "project"
+      },
+      "section" : {
+        "gid" : "1211223581369189",
+        "name" : "Pending Approval",
+        "resource_type" : "section"
+      }
+    } ],
+    "modified_at" : "2025-12-19T16:22:58.523Z",
+    "name" : "Mockup | SiriusXM | Women's Merchandise - Marisa",
+    "notes" : "Client Type\nClient\n\nMockup Type\nWhitestone Template\n\nPertinent Information:\n\n\nWebsite & Social Media Inspiration:\n\n\nProduct Info:\n/Owala 24 oz\n• Color: NEED FOLLOWING COLORS MOCKED: shy marshmallow\n• Imprint Method: screen print\n• Imprint Color: white or black (pending color of bottle)\n• Location: 1\n• Size: as recommended/ see website dims\n• Link: https://etsexpress.com/ProductDetail/78871\n• Notes: logos attached\nOwala 32 oz\n• Color: coastal mist\n• Imprint Method: screen print\n• Imprint Color: white\n• Location: 1\n• Size: as recommended/ see website dims\n• Link: https://etsexpress.com/ProductDetail/79494\n• Notes: logos attached",
+    "num_hearts" : 0,
+    "num_likes" : 0,
+    "parent" : null,
+    "permalink_url" : "https://app.asana.com/1/1201405786124364/project/1211223909834951/task/1212503961045093",
+    "projects" : [ {
+      "gid" : "1211223909834951",
+      "name" : "Art Requests",
+      "resource_type" : "project"
+    } ],
+    "resource_type" : "task",
+    "start_at" : null,
+    "start_on" : null,
+    "subtasks" : [ ],
+    "tags" : [ {
+      "gid" : "1209674043391917",
+      "name" : "Rush",
+      "resource_type" : "tag"
+    } ],
+    "resource_subtype" : "default_task",
+    "workspace" : {
+      "gid" : "1201405786124364",
+      "name" : "Whitestone",
+      "resource_type" : "workspace"
+    }
+  }, {
+    "gid" : "1212520640422472",
+    "actual_time_minutes" : 50,
+    "assignee" : {
+      "gid" : "1211708719739843",
+      "name" : "Aly Campos",
+      "resource_type" : "user"
+    },
+    "assignee_status" : "inbox",
+    "completed" : true,
+    "completed_at" : "2025-12-19T16:13:59.755Z",
+    "created_at" : "2025-12-18T18:19:30.056Z",
+    "custom_fields" : [ {
+      "gid" : "1211551541910237",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551541910239",
+        "color" : "hot-pink",
+        "enabled" : true,
+        "name" : "Creative Design Services",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910242",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "PPTX",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910243",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Proofs",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910244",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Sneak Peek",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Request",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Mockup",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058961",
+      "enabled" : true,
+      "name" : "Client",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "SiriusXM",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "SiriusXM",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1211551542058970",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058971",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Yes",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058972",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "No",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Billable",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058988",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058990",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "$50k-$250k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058991",
+        "color" : "red",
+        "enabled" : true,
+        "name" : ">$250k",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Value",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "<$50k",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1209588204727028",
+      "enabled" : true,
+      "name" : "Estimated time",
+      "description" : "Asana-created. Estimate time to complete a task.",
+      "number_value" : null,
+      "precision" : 0,
+      "created_by" : null,
+      "display_value" : null,
+      "resource_subtype" : "number",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "number"
+    }, {
+      "gid" : "1211701715737841",
+      "enabled" : true,
+      "name" : "Google Folder",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "https://drive.google.com/drive/folders/1z7LUSPgogRWm89MfX9zoSwJsvS-x5Q82",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "https://drive.google.com/drive/folders/1z7LUSPgogRWm89MfX9zoSwJsvS-x5Q82",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1210695790941177",
+      "enabled" : true,
+      "name" : "Project#",
+      "description" : "Project in commonsku",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "43246",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "43246",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1212310605793914",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1212310605793915",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "US",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793916",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "CAD",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793917",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "EU",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793918",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "UK",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793919",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "APAC",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Region",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    } ],
+    "due_at" : "2025-12-19T17:00:00.000Z",
+    "due_on" : "2025-12-19",
+    "followers" : [ {
+      "gid" : "1208461833471002",
+      "name" : "Tod Ellington",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1208717202115152",
+      "name" : "Aloe",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1211708719739843",
+      "name" : "Aly Campos",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1208917511521972",
+      "name" : "Hope Luria",
+      "resource_type" : "user"
+    } ],
+    "hearted" : false,
+    "hearts" : [ ],
+    "liked" : false,
+    "likes" : [ ],
+    "memberships" : [ {
+      "project" : {
+        "gid" : "1211223909834951",
+        "name" : "Art Requests",
+        "resource_type" : "project"
+      },
+      "section" : {
+        "gid" : "1211223581369189",
+        "name" : "Pending Approval",
+        "resource_type" : "section"
+      }
+    } ],
+    "modified_at" : "2025-12-19T16:14:01.291Z",
+    "name" : "Mockup | SiriusXM | Yacht Rock & Classic Rewind Hats - Marisa",
+    "notes" : "Client Type\nClient\n\nMockup Type\nWhitestone Template\n\nPertinent Information:\nYacht Rock & Classic Rewind Stations are looking for some retail inspired hats to add to their company store assortment. Please show some creative mockups utilizing 3D embroidery, patches, Silicone emblems, etc. Whatever you think would be nice along with the hat styles below and their logos attached. \n\nhttps://www.ssactivewear.com/p/valucap/vc400\nhttps://www.ssactivewear.com/p/valucap/8804h\nhttp://ssactivewear.com/p/valucap/vc700\nhttps://www.ssactivewear.com/p/econscious/ec7094\nhttps://ascolour.com/surf-cap-1114/\nhttps://ascolour.com/surf-rope-cap/\nhttps://hpgbrands.com/hg02bh/wanderlust-packable-bucket-hat/#__bulk-Standard-usd - use deco methods listed on hpg website",
+    "num_hearts" : 0,
+    "num_likes" : 0,
+    "parent" : null,
+    "permalink_url" : "https://app.asana.com/1/1201405786124364/project/1211223909834951/task/1212520640422472",
+    "projects" : [ {
+      "gid" : "1211223909834951",
+      "name" : "Art Requests",
+      "resource_type" : "project"
+    } ],
+    "resource_type" : "task",
+    "start_at" : null,
+    "start_on" : null,
+    "subtasks" : [ ],
+    "tags" : [ {
+      "gid" : "1209208460622413",
+      "name" : "Needs Creative",
+      "resource_type" : "tag"
+    } ],
+    "resource_subtype" : "default_task",
+    "workspace" : {
+      "gid" : "1201405786124364",
+      "name" : "Whitestone",
+      "resource_type" : "workspace"
+    }
+  }, {
+    "gid" : "1212506078538845",
+    "actual_time_minutes" : 118,
+    "assignee" : {
+      "gid" : "1211652430437124",
+      "name" : "Aeva Roth",
+      "resource_type" : "user"
+    },
+    "assignee_status" : "inbox",
+    "completed" : true,
+    "completed_at" : "2025-12-18T14:41:41.611Z",
+    "created_at" : "2025-12-17T21:18:37.106Z",
+    "custom_fields" : [ {
+      "gid" : "1211551541910237",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551541910239",
+        "color" : "hot-pink",
+        "enabled" : true,
+        "name" : "Creative Design Services",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910242",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "PPTX",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910243",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Proofs",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910244",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Sneak Peek",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Request",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Mockup",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058961",
+      "enabled" : true,
+      "name" : "Client",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Tool of North America",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "Tool of North America",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1211551542058970",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058971",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Yes",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058972",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "No",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Billable",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058988",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058990",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "$50k-$250k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058991",
+        "color" : "red",
+        "enabled" : true,
+        "name" : ">$250k",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Value",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "<$50k",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1209588204727028",
+      "enabled" : true,
+      "name" : "Estimated time",
+      "description" : "Asana-created. Estimate time to complete a task.",
+      "number_value" : null,
+      "precision" : 0,
+      "created_by" : null,
+      "display_value" : null,
+      "resource_subtype" : "number",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "number"
+    }, {
+      "gid" : "1211701715737841",
+      "enabled" : true,
+      "name" : "Google Folder",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "https://drive.google.com/drive/folders/1PsepgC73QEi6IWYAxjkmcV4CUFQqCwYY",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "https://drive.google.com/drive/folders/1PsepgC73QEi6IWYAxjkmcV4CUFQqCwYY",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1210695790941177",
+      "enabled" : true,
+      "name" : "Project#",
+      "description" : "Project in commonsku",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "43223",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "43223",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1212310605793914",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1212310605793915",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "US",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793916",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "CAD",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793917",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "EU",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793918",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "UK",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793919",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "APAC",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Region",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1209186970883988",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1209186970883989",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "FOLLOW UP NEEDED",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883990",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "PROBLEM",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883991",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "CLIENT",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883992",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "FOLLOW UP SENT",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883993",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "ART",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883994",
+        "color" : "cool-gray",
+        "enabled" : true,
+        "name" : "SUPPLIER",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883995",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "TO DO ",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883996",
+        "color" : "blue",
+        "enabled" : true,
+        "name" : "SAMPLING",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883997",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "PRODUCTION",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883998",
+        "color" : "indigo",
+        "enabled" : true,
+        "name" : "SHIPPING ",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883999",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "COMPLETE!",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970884000",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "TABLED",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209573142249405",
+        "color" : "indigo",
+        "enabled" : true,
+        "name" : "IN PROGRESS",
+        "resource_type" : "enum_option"
+      } ],
+      "multi_enum_values" : [ ],
+      "name" : "Labels",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1209077313707144",
+        "name" : "Madeline Nelson",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "multi_enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "multi_enum"
+    }, {
+      "gid" : "1211674134861880",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211674134861881",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "Level 1: Simple project – 1 location, under 5 POs, standard or rush order",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211674134861882",
+        "color" : "blue",
+        "enabled" : true,
+        "name" : "Level 2: Moderate complexity – drop-ship templates, over 5 POs",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211674134861883",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Level 3: Kitting – multiple items going to different locations",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211674134861884",
+        "color" : "hot-pink",
+        "enabled" : true,
+        "name" : "Level 4: Custom – overseas production, tight timelines",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211674134861885",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "Level 5: High complexity – international shipments to multiple locations, involve Logistics dept, high $$ amount",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Complexity Level",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1201951260002630",
+        "name" : "Jill Brandt",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211854256993048",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211854256993049",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Yes",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Needs Assignment",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1207470520830429",
+        "name" : "Kayla Ford",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1210684849870536",
+      "enabled" : true,
+      "name" : "PO Total",
+      "description" : "PO total amount in commonsku",
+      "number_value" : null,
+      "precision" : 2,
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "number",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "number"
+    } ],
+    "due_at" : "2025-12-18T16:00:00.000Z",
+    "due_on" : "2025-12-18",
+    "followers" : [ {
+      "gid" : "1208461833471002",
+      "name" : "Tod Ellington",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1209077313707144",
+      "name" : "Madeline Nelson",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1209077313622099",
+      "name" : "Erin Campbell",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1211652430437124",
+      "name" : "Aeva Roth",
+      "resource_type" : "user"
+    } ],
+    "hearted" : false,
+    "hearts" : [ ],
+    "liked" : false,
+    "likes" : [ ],
+    "memberships" : [ {
+      "project" : {
+        "gid" : "1211223909834951",
+        "name" : "Art Requests",
+        "resource_type" : "project"
+      },
+      "section" : {
+        "gid" : "1211223581369189",
+        "name" : "Pending Approval",
+        "resource_type" : "section"
+      }
+    } ],
+    "modified_at" : "2025-12-18T14:41:43.269Z",
+    "name" : "Mockup | Tool of North America | Tool of NA - LinkedIn Event",
+    "notes" : "Client Type\nClient\n\nMockup Type\nWhitestone Template\n\nPertinent Information:\nWorking with Tool of NA on an event coming up for LinkedIn in their offices in NYC!\n\nWebsite & Social Media Inspiration:\n\n\nProduct Info:\n/Scrunchie\n• Color: Full Color\n• Imprint Method: Full Color\n• Imprint Color: to match brand\n• Location: all over\n• Size: all over\n• Link: https://www.numomfg.com/SCRUNCHIE-4CP-NYLON\n• Notes: prizes include: scrunchie\nbackpack keychain\n• Color: black\n• Imprint Method: printed\n• Imprint Color: one\n• Location: front of bag\n• Size: max\n• Link: https://www.atmec.net/product.php?itemID=3206&category=15\n• Notes: backpack keychain\nprize wheel\n• Color: royal\n• Imprint Method: printed\n• Imprint Color: full color\n• Location: all slots and center label\n• Size: full bleed\n• Link: https://www.showdowndisplays.com/Product/Select?Sku=280104&returnUrl=%2FProductSearch%3FBrandCode%3Dsd%26HasSubCategories%3DFalse%26MaxRecords%3D100%26Offset%3D0%26SearchWords%3Dprize%2520wheel%26SortAsc%3DFalse%26SortBy%3DPurchaseFrequency%26SearchType%3DProductSearch%26IncludeAggregations%3DTrue\n• Notes: 1 yr LinkedIn Premium",
+    "num_hearts" : 0,
+    "num_likes" : 0,
+    "parent" : {
+      "gid" : "1212482105508819",
+      "name" : "Tool of NA- LinkedIn Giveaways | SO #",
+      "resource_type" : "task",
+      "resource_subtype" : "default_task"
+    },
+    "permalink_url" : "https://app.asana.com/1/1201405786124364/project/1211223909834951/task/1212506078538845",
+    "projects" : [ {
+      "gid" : "1211223909834951",
+      "name" : "Art Requests",
+      "resource_type" : "project"
+    } ],
+    "resource_type" : "task",
+    "start_at" : null,
+    "start_on" : null,
+    "subtasks" : [ ],
+    "tags" : [ {
+      "gid" : "1209208460622413",
+      "name" : "Needs Creative",
+      "resource_type" : "tag"
+    } ],
+    "resource_subtype" : "default_task",
+    "workspace" : {
+      "gid" : "1201405786124364",
+      "name" : "Whitestone",
+      "resource_type" : "workspace"
+    }
+  }, {
+    "gid" : "1212450048618337",
+    "actual_time_minutes" : 92,
+    "assignee" : {
+      "gid" : "1209482615978799",
+      "name" : "Mary Lang",
+      "resource_type" : "user"
+    },
+    "assignee_status" : "inbox",
+    "completed" : true,
+    "completed_at" : "2025-12-17T21:49:07.192Z",
+    "created_at" : "2025-12-17T17:01:55.608Z",
+    "custom_fields" : [ {
+      "gid" : "1211551541910237",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551541910239",
+        "color" : "hot-pink",
+        "enabled" : true,
+        "name" : "Creative Design Services",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910242",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "PPTX",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910243",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Proofs",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910244",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Sneak Peek",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Request",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Mockup",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058961",
+      "enabled" : true,
+      "name" : "Client",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "SiriusXM",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "SiriusXM",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1211551542058970",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058971",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Yes",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058972",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "No",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Billable",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058988",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058990",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "$50k-$250k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058991",
+        "color" : "red",
+        "enabled" : true,
+        "name" : ">$250k",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Value",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "<$50k",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1209588204727028",
+      "enabled" : true,
+      "name" : "Estimated time",
+      "description" : "Asana-created. Estimate time to complete a task.",
+      "number_value" : null,
+      "precision" : 0,
+      "created_by" : null,
+      "display_value" : null,
+      "resource_subtype" : "number",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "number"
+    }, {
+      "gid" : "1211701715737841",
+      "enabled" : true,
+      "name" : "Google Folder",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "https://drive.google.com/drive/folders/15WaQRv_bILGSjmJDBqNZ7rqXfZ-Ft0j9",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "https://drive.google.com/drive/folders/15WaQRv_bILGSjmJDBqNZ7rqXfZ-Ft0j9",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1210695790941177",
+      "enabled" : true,
+      "name" : "Project#",
+      "description" : "Project in commonsku",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "42632",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "42632",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1212310605793914",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1212310605793915",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "US",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793916",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "CAD",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793917",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "EU",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793918",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "UK",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793919",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "APAC",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Region",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    } ],
+    "due_at" : "2025-12-17T22:00:00.000Z",
+    "due_on" : "2025-12-17",
+    "followers" : [ {
+      "gid" : "1208461833471002",
+      "name" : "Tod Ellington",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1208717202115152",
+      "name" : "Aloe",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1208917511521972",
+      "name" : "Hope Luria",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1209482615978799",
+      "name" : "Mary Lang",
+      "resource_type" : "user"
+    } ],
+    "hearted" : false,
+    "hearts" : [ ],
+    "liked" : false,
+    "likes" : [ ],
+    "memberships" : [ {
+      "project" : {
+        "gid" : "1211223909834951",
+        "name" : "Art Requests",
+        "resource_type" : "project"
+      },
+      "section" : {
+        "gid" : "1211223581369189",
+        "name" : "Pending Approval",
+        "resource_type" : "section"
+      }
+    } ],
+    "modified_at" : "2025-12-18T22:59:03.740Z",
+    "name" : "Mockup | SiriusXM | SiriusXM | Catalyst Awards - Marisa",
+    "notes" : "Client Type\nClient\n\nMockup Type\nWhitestone Template\n\nPertinent Information:\nLogos- https://drive.google.com/drive/folders/1FFkzOQJRPW9V_apprturpxCGADwZsfW1?usp=drive_link\n\nWebsite & Social Media Inspiration:\n\n\nProduct Info:\n/Speaker\n• Color: white\n• Imprint Method: 4CP on front\n• Imprint Color: Show two designs: black background with white logo & blue background with white logo\n• Location: front\n• Size: see website.\n• Link: https://powerstick.com/presto?mnc-id-sel=block-d9a74160ebe19782acf6%3E-%3E1%3E-%3E1%3E-%3E1\n• Notes: Show each color option with the full Sirius XM logo and the S only logo\nAward\n• Color: blue base\n• Imprint Method: Deep Etch on Back & Engrave on Base\n• Imprint Color: reference website mockup\n• Location: Deep Etch on Back & Engrave on Base\n• Size: as recommended\n• Link: https://us.stregisgrp.com/channel/recognition/detail/OP_637/OPT637-ML\n• Notes: I'm waiting for the exact verbiage for the base of the awards",
+    "num_hearts" : 0,
+    "num_likes" : 0,
+    "parent" : null,
+    "permalink_url" : "https://app.asana.com/1/1201405786124364/project/1211223909834951/task/1212450048618337",
+    "projects" : [ {
+      "gid" : "1211223909834951",
+      "name" : "Art Requests",
+      "resource_type" : "project"
+    } ],
+    "resource_type" : "task",
+    "start_at" : null,
+    "start_on" : null,
+    "subtasks" : [ ],
+    "tags" : [ {
+      "gid" : "1209674043391917",
+      "name" : "Rush",
+      "resource_type" : "tag"
+    } ],
+    "resource_subtype" : "default_task",
+    "workspace" : {
+      "gid" : "1201405786124364",
+      "name" : "Whitestone",
+      "resource_type" : "workspace"
+    }
+  }, {
+    "gid" : "1212482468226943",
+    "actual_time_minutes" : 39,
+    "assignee" : {
+      "gid" : "1211708716712122",
+      "name" : "Amelia Detwiler",
+      "resource_type" : "user"
+    },
+    "assignee_status" : "inbox",
+    "completed" : true,
+    "completed_at" : "2025-12-17T21:38:28.263Z",
+    "created_at" : "2025-12-16T20:11:23.442Z",
+    "custom_fields" : [ {
+      "gid" : "1211551541910237",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551541910239",
+        "color" : "hot-pink",
+        "enabled" : true,
+        "name" : "Creative Design Services",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910242",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "PPTX",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910243",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Proofs",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910244",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Sneak Peek",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Request",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Mockup",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058961",
+      "enabled" : true,
+      "name" : "Client",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Spotify",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "Spotify",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1211551542058970",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058971",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Yes",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058972",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "No",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Billable",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058988",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058990",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "$50k-$250k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058991",
+        "color" : "red",
+        "enabled" : true,
+        "name" : ">$250k",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Value",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "<$50k",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1209588204727028",
+      "enabled" : true,
+      "name" : "Estimated time",
+      "description" : "Asana-created. Estimate time to complete a task.",
+      "number_value" : null,
+      "precision" : 0,
+      "created_by" : null,
+      "display_value" : null,
+      "resource_subtype" : "number",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "number"
+    }, {
+      "gid" : "1211701715737841",
+      "enabled" : true,
+      "name" : "Google Folder",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "https://drive.google.com/drive/folders/14ABnQWWHoE1jC9d0HR0I-JfvGHWd1-A6?usp=drive_link",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "https://drive.google.com/drive/folders/14ABnQWWHoE1jC9d0HR0I-JfvGHWd1-A6?usp=drive_link",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1210695790941177",
+      "enabled" : true,
+      "name" : "Project#",
+      "description" : "Project in commonsku",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "42911",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "42911",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1212310605793914",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1212310605793915",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "US",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793916",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "CAD",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793917",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "EU",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793918",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "UK",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793919",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "APAC",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Region",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    } ],
+    "due_at" : "2025-12-17T22:00:00.000Z",
+    "due_on" : "2025-12-17",
+    "followers" : [ {
+      "gid" : "1208461833471002",
+      "name" : "Tod Ellington",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1208717202115152",
+      "name" : "Aloe",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1211708716712122",
+      "name" : "Amelia Detwiler",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1211692479931723",
+      "name" : "Astrid Handy",
+      "resource_type" : "user"
+    } ],
+    "hearted" : false,
+    "hearts" : [ ],
+    "liked" : false,
+    "likes" : [ ],
+    "memberships" : [ {
+      "project" : {
+        "gid" : "1211223909834951",
+        "name" : "Art Requests",
+        "resource_type" : "project"
+      },
+      "section" : {
+        "gid" : "1211223581369189",
+        "name" : "Pending Approval",
+        "resource_type" : "section"
+      }
+    } ],
+    "modified_at" : "2025-12-17T21:38:29.941Z",
+    "name" : "Mockup | Spotify | Hoodies- Rosie",
+    "notes" : "Client Type\nClient\n\nMockup Type\nWhitestone Template\n\nPertinent Information:\nWe want the left chest to say \"Spotify Research\" in white - use this logo with the bug and match research to the font.  https://drive.google.com/file/d/10Q89Sd3mBlOUW-nvi21UrrnJmqc-B8Pb/view?usp=sharing\nWe'd also like two more mockups using the CPR logo at the end of this document: https://docs.google.com/document/d/1WhTAeJpxmVyExO1e10amT9vh0X6HMrUSdBclGb0KIgM/edit?tab=t.0. I'm waiting on vector artwork, but can you make this work for now? \nVersion 1 - Left chest: Spotify Bug in white + CPR logo in colors \nVersion 2- Left chest: as first \"spotify research\" mockup above | Right chest: CPR logo in colors\n\nWebsite & Social Media Inspiration:\n\n\nProduct Info:\n/Hoodie\n• Color: Black\n• Imprint Method: Embroidery\n• Imprint Color: Spotify - White CPR - 3 colors as shown on logo file\n• Location: Left Chest\n• Size: 3\"\n• Link: https://www.ssactivewear.com/p/gildan/18600\n• Notes: ",
+    "num_hearts" : 0,
+    "num_likes" : 0,
+    "parent" : null,
+    "permalink_url" : "https://app.asana.com/1/1201405786124364/project/1211223909834951/task/1212482468226943",
+    "projects" : [ {
+      "gid" : "1211223909834951",
+      "name" : "Art Requests",
+      "resource_type" : "project"
+    } ],
+    "resource_type" : "task",
+    "start_at" : null,
+    "start_on" : null,
+    "subtasks" : [ ],
+    "tags" : [ {
+      "gid" : "1209208460622413",
+      "name" : "Needs Creative",
+      "resource_type" : "tag"
+    }, {
+      "gid" : "1209674043391917",
+      "name" : "Rush",
+      "resource_type" : "tag"
+    } ],
+    "resource_subtype" : "default_task",
+    "workspace" : {
+      "gid" : "1201405786124364",
+      "name" : "Whitestone",
+      "resource_type" : "workspace"
+    }
+  }, {
+    "gid" : "1212468133205010",
+    "actual_time_minutes" : 111,
+    "assignee" : {
+      "gid" : "1211652430437124",
+      "name" : "Aeva Roth",
+      "resource_type" : "user"
+    },
+    "assignee_status" : "inbox",
+    "completed" : true,
+    "completed_at" : "2025-12-16T20:35:15.760Z",
+    "created_at" : "2025-12-15T23:48:32.251Z",
+    "custom_fields" : [ {
+      "gid" : "1211551541910237",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551541910239",
+        "color" : "hot-pink",
+        "enabled" : true,
+        "name" : "Creative Design Services",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910242",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "PPTX",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910243",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Proofs",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551541910244",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Sneak Peek",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551541910241",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "Mockup",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Request",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Mockup",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058961",
+      "enabled" : true,
+      "name" : "Client",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "Rahua",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "Rahua",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1211551542058970",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058971",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Yes",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058972",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "No",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Billable",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211551542058988",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058990",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "$50k-$250k",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211551542058991",
+        "color" : "red",
+        "enabled" : true,
+        "name" : ">$250k",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1211551542058989",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "<$50k",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Value",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "<$50k",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1209588204727028",
+      "enabled" : true,
+      "name" : "Estimated time",
+      "description" : "Asana-created. Estimate time to complete a task.",
+      "number_value" : null,
+      "precision" : 0,
+      "created_by" : null,
+      "display_value" : null,
+      "resource_subtype" : "number",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "number"
+    }, {
+      "gid" : "1211701715737841",
+      "enabled" : true,
+      "name" : "Google Folder",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "https://drive.google.com/drive/folders/1etY5sQ1Ogf-HNCCh8V2LLoNskuI5wpx7",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "https://drive.google.com/drive/folders/1etY5sQ1Ogf-HNCCh8V2LLoNskuI5wpx7",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1210695790941177",
+      "enabled" : true,
+      "name" : "Project#",
+      "description" : "Project in commonsku",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : "43153",
+      "resource_subtype" : "text",
+      "resource_type" : "custom_field",
+      "text_value" : "43153",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "text"
+    }, {
+      "gid" : "1212310605793914",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1212310605793915",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "US",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793916",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "CAD",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793917",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "EU",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793918",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "UK",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1212310605793919",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "APAC",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Region",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1209186970883988",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1209186970883989",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "FOLLOW UP NEEDED",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883990",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "PROBLEM",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883991",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "CLIENT",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883992",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "FOLLOW UP SENT",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883993",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "ART",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883994",
+        "color" : "cool-gray",
+        "enabled" : true,
+        "name" : "SUPPLIER",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883995",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "TO DO ",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883996",
+        "color" : "blue",
+        "enabled" : true,
+        "name" : "SAMPLING",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883997",
+        "color" : "blue-green",
+        "enabled" : true,
+        "name" : "PRODUCTION",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883998",
+        "color" : "indigo",
+        "enabled" : true,
+        "name" : "SHIPPING ",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970883999",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "COMPLETE!",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209186970884000",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "TABLED",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1209573142249405",
+        "color" : "indigo",
+        "enabled" : true,
+        "name" : "IN PROGRESS",
+        "resource_type" : "enum_option"
+      } ],
+      "multi_enum_values" : [ ],
+      "name" : "Labels",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1209077313707144",
+        "name" : "Madeline Nelson",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "multi_enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "multi_enum"
+    }, {
+      "gid" : "1211674134861880",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211674134861881",
+        "color" : "yellow",
+        "enabled" : true,
+        "name" : "Level 1: Simple project – 1 location, under 5 POs, standard or rush order",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211674134861882",
+        "color" : "blue",
+        "enabled" : true,
+        "name" : "Level 2: Moderate complexity – drop-ship templates, over 5 POs",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211674134861883",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Level 3: Kitting – multiple items going to different locations",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211674134861884",
+        "color" : "hot-pink",
+        "enabled" : true,
+        "name" : "Level 4: Custom – overseas production, tight timelines",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1211674134861885",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "Level 5: High complexity – international shipments to multiple locations, involve Logistics dept, high $$ amount",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Complexity Level",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1201951260002630",
+        "name" : "Jill Brandt",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1211854256993048",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1211854256993049",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Yes",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Needs Assignment",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1207470520830429",
+        "name" : "Kayla Ford",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "enum"
+    }, {
+      "gid" : "1210684849870536",
+      "enabled" : true,
+      "name" : "PO Total",
+      "description" : "PO total amount in commonsku",
+      "number_value" : null,
+      "precision" : 2,
+      "created_by" : {
+        "gid" : "1208461833471002",
+        "name" : "Tod Ellington",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "number",
+      "resource_type" : "custom_field",
+      "is_formula_field" : false,
+      "is_value_read_only" : false,
+      "type" : "number"
+    } ],
+    "due_at" : "2025-12-16T23:00:00.000Z",
+    "due_on" : "2025-12-16",
+    "followers" : [ {
+      "gid" : "1208461833471002",
+      "name" : "Tod Ellington",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1209077313707144",
+      "name" : "Madeline Nelson",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1209077313622099",
+      "name" : "Erin Campbell",
+      "resource_type" : "user"
+    }, {
+      "gid" : "1211652430437124",
+      "name" : "Aeva Roth",
+      "resource_type" : "user"
+    } ],
+    "hearted" : false,
+    "hearts" : [ ],
+    "liked" : false,
+    "likes" : [ ],
+    "memberships" : [ {
+      "project" : {
+        "gid" : "1211223909834951",
+        "name" : "Art Requests",
+        "resource_type" : "project"
+      },
+      "section" : {
+        "gid" : "1211223581369189",
+        "name" : "Pending Approval",
+        "resource_type" : "section"
+      }
+    } ],
+    "modified_at" : "2025-12-16T20:35:33.032Z",
+    "name" : "Mockup | Rahua | Rahua | PR Kit",
+    "notes" : "Client Type\nProspect\n\nMockup Type\nWhitestone Template\n\nPertinent Information:\nclient needs our help with design. they provided the artwork and mockup below, along with instructions on how they'd like it to be modified. Then, they asked if we could provide 3 more alternative designs that go with their brand?\n\nWebsite & Social Media Inspiration:\nhttps://rahua.com/\n\nProduct Info:\n/B&C Crewneck\n• Color: Forest Green\n• Imprint Method: Print\n• Imprint Color: Lavender\n• Location: three\n• Size: see mockup\n• Link: https://www.ssactivewear.com/p/bella/3911/heather_forest-fleece\n• Notes: ",
+    "num_hearts" : 0,
+    "num_likes" : 0,
+    "parent" : {
+      "gid" : "1212451162072240",
+      "name" : "Rahua - Crewnecks / PR Kits | SO #",
+      "resource_type" : "task",
+      "resource_subtype" : "default_task"
+    },
+    "permalink_url" : "https://app.asana.com/1/1201405786124364/project/1211223909834951/task/1212468133205010",
+    "projects" : [ {
+      "gid" : "1211223909834951",
+      "name" : "Art Requests",
+      "resource_type" : "project"
+    } ],
+    "resource_type" : "task",
+    "start_at" : null,
+    "start_on" : null,
+    "subtasks" : [ ],
+    "tags" : [ {
+      "gid" : "1209208460622413",
+      "name" : "Needs Creative",
+      "resource_type" : "tag"
+    } ],
+    "resource_subtype" : "default_task",
+    "workspace" : {
+      "gid" : "1201405786124364",
+      "name" : "Whitestone",
+      "resource_type" : "workspace"
+    }
+  } ]
+}

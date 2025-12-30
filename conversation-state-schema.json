@@ -1,0 +1,289 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Art Request Conversation State",
+  "description": "Schema for tracking conversation state in n8n/Redis storage",
+  "type": "object",
+  "properties": {
+    "conversationId": {
+      "type": "string",
+      "description": "UUID v4 identifier for this conversation",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when conversation started"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last update"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["in_progress", "submitted", "abandoned", "error"],
+      "description": "Current conversation status"
+    },
+    "data": {
+      "type": "object",
+      "description": "Collected art request data",
+      "properties": {
+        "requestType": {
+          "type": ["string", "null"],
+          "enum": ["Creative Design Services", "Mockup", "PPTX", "Proofs", "Sneak Peek", "Rise & Shine", null],
+          "description": "Type of art request"
+        },
+        "clientName": {
+          "type": ["string", "null"],
+          "description": "Client name (official from CommonSKU or user-provided)"
+        },
+        "clientExists": {
+          "type": "boolean",
+          "description": "Whether client exists in CommonSKU system",
+          "default": false
+        },
+        "clientId": {
+          "type": ["string", "null"],
+          "description": "CommonSKU client ID if exists"
+        },
+        "requestorName": {
+          "type": ["string", "null"],
+          "description": "Full name of person making the request"
+        },
+        "requestorEmail": {
+          "type": ["string", "null"],
+          "format": "email",
+          "description": "Email address of requestor"
+        },
+        "region": {
+          "type": ["string", "null"],
+          "enum": ["US", "CAD", "EU", "UK", "APAC", null],
+          "description": "Geographic region for request"
+        },
+        "requestTitle": {
+          "type": ["string", "null"],
+          "description": "Short descriptive title for the project"
+        },
+        "dueDate": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "ISO 8601 date when project is due"
+        },
+        "projectValue": {
+          "type": ["string", "null"],
+          "enum": ["<$50k", "$50k-$250k", ">$250k", null],
+          "description": "Estimated project value range"
+        },
+        "billable": {
+          "type": ["string", "null"],
+          "enum": ["Yes", "No", null],
+          "description": "Whether project is billable"
+        },
+        "clientType": {
+          "type": ["string", "null"],
+          "description": "Type of client (e.g., New, Existing, VIP, Prospect)"
+        },
+        "projectNumber": {
+          "type": ["string", "null"],
+          "description": "CommonSKU project number if applicable"
+        },
+        "pertinentInformation": {
+          "type": ["string", "null"],
+          "description": "Additional context and notes about the project"
+        },
+        "mockupType": {
+          "type": ["string", "null"],
+          "description": "Type of mockup (only for Mockup requests)"
+        },
+        "pptxType": {
+          "type": ["string", "null"],
+          "description": "Type of PPTX (only for PPTX requests)"
+        },
+        "numberOfSlides": {
+          "type": ["integer", "null"],
+          "description": "Number of slides (only for PPTX/Rise & Shine requests)"
+        },
+        "presentationStructure": {
+          "type": ["string", "null"],
+          "description": "Description of slide breakdown (only for PPTX requests)"
+        },
+        "riseAndShineLevel": {
+          "type": ["string", "null"],
+          "enum": ["Bronze", "Silver", "Gold", null],
+          "description": "Rise & Shine tier level (only for Rise & Shine requests)"
+        },
+        "proofType": {
+          "type": ["string", "null"],
+          "description": "Type of proof (only for Proof requests)"
+        },
+        "sneakPeekOptions": {
+          "type": ["string", "null"],
+          "description": "Sneak peek options (only for Sneak Peek requests)"
+        },
+        "products": {
+          "type": "array",
+          "description": "List of products for the project",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Product name"
+              },
+              "color": {
+                "type": ["string", "null"],
+                "description": "Product color"
+              },
+              "imprintMethod": {
+                "type": ["string", "null"],
+                "description": "Imprint/decoration method"
+              },
+              "imprintColor": {
+                "type": ["string", "null"],
+                "description": "Imprint color"
+              },
+              "location": {
+                "type": ["string", "null"],
+                "description": "Decoration location"
+              },
+              "size": {
+                "type": ["string", "null"],
+                "description": "Product or decoration size"
+              },
+              "link": {
+                "type": ["string", "null"],
+                "format": "uri",
+                "description": "Product URL"
+              },
+              "notes": {
+                "type": ["string", "null"],
+                "description": "Additional notes about product"
+              }
+            },
+            "required": ["name"]
+          },
+          "default": []
+        },
+        "websiteLinks": {
+          "type": "array",
+          "description": "Inspiration links from websites/social media",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "Type of link (Instagram, Website, Pinterest, etc.)"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL to inspiration"
+              }
+            },
+            "required": ["type", "url"]
+          },
+          "default": []
+        },
+        "attachments": {
+          "type": "array",
+          "description": "Attachment URLs provided by user",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "default": []
+        },
+        "uploadedFiles": {
+          "type": "array",
+          "description": "Files uploaded directly in chat",
+          "items": {
+            "type": "object",
+            "properties": {
+              "originalName": {
+                "type": "string",
+                "description": "Original filename"
+              },
+              "mimeType": {
+                "type": "string",
+                "description": "MIME type of file"
+              },
+              "size": {
+                "type": "integer",
+                "description": "File size in bytes"
+              },
+              "tempPath": {
+                "type": "string",
+                "description": "Temporary storage path in n8n"
+              },
+              "binaryPropertyName": {
+                "type": "string",
+                "description": "n8n binary property reference"
+              }
+            },
+            "required": ["originalName", "tempPath"]
+          },
+          "default": []
+        },
+        "collaborators": {
+          "type": "array",
+          "description": "Email addresses of collaborators to add to Asana task",
+          "items": {
+            "type": "string",
+            "format": "email"
+          },
+          "default": []
+        },
+        "labels": {
+          "type": "array",
+          "description": "Labels/tags to apply (Call Needed, Rush, Needs Creative)",
+          "items": {
+            "type": "string",
+            "enum": ["Call Needed", "Rush", "Needs Creative"]
+          },
+          "default": []
+        }
+      },
+      "required": []
+    },
+    "messages": {
+      "type": "array",
+      "description": "Full conversation history",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": ["user", "assistant"],
+            "description": "Message sender role"
+          },
+          "content": {
+            "type": "string",
+            "description": "Message content"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 timestamp of message"
+          }
+        },
+        "required": ["role", "content", "timestamp"]
+      },
+      "default": []
+    },
+    "asanaTaskId": {
+      "type": ["string", "null"],
+      "description": "Asana task GID if submitted"
+    },
+    "asanaTaskURL": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Asana task permalink if submitted"
+    },
+    "googleDriveFolderURL": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Google Drive folder URL if created"
+    }
+  },
+  "required": ["conversationId", "startedAt", "status", "data", "messages"]
+}
