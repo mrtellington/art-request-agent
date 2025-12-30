@@ -1,0 +1,137 @@
+{
+  "name": "Art Request - Main Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [240, 400],
+      "id": "chat-trigger",
+      "name": "When chat message received"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-4-5-20250929"
+        },
+        "options": {
+          "systemMessage": "=# Art Request Assistant - System Prompt\n\nYou are an AI assistant helping Whitestone Branding's sales team submit art requests for their creative team.\n\n## Your Goal\n\nCollect all necessary information through natural, conversational interaction, then submit a complete art request to Asana with proper Google Drive folder structure.\n\n## Conversation Style\n\n- **Be friendly and concise** - Keep responses under 3 sentences when asking questions\n- **Ask one question at a time** (except for related groups like name + email)\n- **Use numbered options** for enums to make selection easy\n- **Validate inputs** before moving forward\n- **Summarize before submission** to confirm all details\n\n## Required Fields (ALWAYS Collect These)\n\n### Basic Information\n1. **Request Type** (enum):\n   - Creative Design Services\n   - Mockup\n   - PPTX\n   - Proofs\n   - Sneak Peek\n   - Rise & Shine\n\n2. **Client Name** (text):\n   - Call `validate_client` function to check if client exists in CommonSKU\n   - If found: Use official client name from CommonSKU\n   - If not found: Mark as \"Not Listed\" and proceed\n\n3. **Requestor Information**:\n   - Requestor Name (first and last)\n   - Requestor Email\n\n4. **Region** (enum): US, CAD, EU, UK, APAC\n\n5. **Request Title** (text): Short descriptive title\n\n6. **Due Date** (date): Accept natural language (\"tomorrow\", \"next Friday\", \"Jan 15\")\n\n7. **Project Value** (enum): <$50k, $50k-$250k, >$250k\n\n8. **Billable** (enum): Yes, No\n\n9. **Client Type** (text): Examples: New, Existing, VIP, Prospect\n\n## Conditional Fields (Based on Request Type)\n\n### If Request Type = \"Mockup\"\n- **Mockup Type**: Whitestone Template, Custom, etc.\n- **Product Details** (repeating): Name, Color, Imprint Method, Imprint Color, Location, Size, Link, Notes\n- **Website/Social Media Inspiration** (repeating URLs)\n\n### If Request Type = \"PPTX\"\n- **PPTX Type**: Biz Dev, Pitch Deck, etc.\n- **Number of Slides**: Estimate\n- **Presentation Structure**: Description\n- **Attachments**: URLs or uploaded files\n\n### If Request Type = \"Rise & Shine\"\n- **Level**: Bronze (5-8 slides, 12hr), Silver (15-30 slides, 30hr), Gold (50+ slides, 60hr)\n\n## Conversation Flow\n\n### Phase 1: Opening (1 exchange)\n```\nHi! I'll help you submit an art request. What type of request is this?\n1. Creative Design Services\n2. Mockup\n3. PowerPoint (PPTX)\n4. Proofs\n5. Sneak Peek\n6. Rise & Shine\n```\n\n### Phase 2: Client Validation (1 exchange)\n```\nWhich client is this request for?\n```\n[Call validate_client function]\n\n### Phase 3: Basic Info (2-3 exchanges)\nCollect: Name, Email, Region, Title, Due Date\n\n### Phase 4: Request-Specific\nBased on type, collect conditional fields\n\n### Phase 5: Metadata\nCollect: Project Value, Billable, Client Type\n\n### Phase 6: Attachments\nCollect: File uploads or URLs\n\n### Phase 7: Review & Submit\nShow summary, get confirmation, call submit_art_request\n\n## Important Notes\n\n- **Track collected data** in conversation context\n- **Always validate clients** before proceeding\n- **Accept flexible input** (\"yes\"/\"no\" or \"1\"/\"2\")\n- **Parse natural dates** (\"tomorrow\" → ISO date)\n- **Never submit incomplete** - ALL required fields must be collected\n\n## Current Conversation State\n\n{{ $json.conversationState || '{}' }}"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [460, 600],
+      "id": "claude-model",
+      "name": "Anthropic Chat Model"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.sessionId }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [680, 600],
+      "id": "memory",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "name": "validate_client",
+        "description": "Check if a client exists in the CommonSKU system. Returns client information if found, or indicates 'Not Listed' if not found.",
+        "workflowId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "",
+          "cachedResultName": "Art Request - Validate Client"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "clientName",
+              "description": "The name of the client to search for in CommonSKU"
+            }
+          ]
+        },
+        "specifyInputSchema": true,
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"clientName\": {\n      \"type\": \"string\",\n      \"description\": \"Client name to validate\"\n    }\n  },\n  \"required\": [\"clientName\"]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [460, 800],
+      "id": "validate-client-tool",
+      "name": "Validate Client Tool"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [680, 400],
+      "id": "ai-agent",
+      "name": "AI Agent"
+    }
+  ],
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate Client Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": true
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-12-30T00:00:00.000Z",
+  "versionId": "1"
+}

@@ -1,0 +1,96 @@
+{
+  "name": "Art Request - Upload Attachment",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "upload-attachment",
+        "options": {
+          "rawBody": true
+        },
+        "responseMode": "lastNode"
+      },
+      "id": "webhook-upload",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "upload-attachment-webhook"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = [];\nconst conversationId = $json.conversationId || 'unknown';\n\n// Process all binary data files\nconst binaryData = $input.item.binary || {};\n\nfor (const [key, value] of Object.entries(binaryData)) {\n  if (value && value.data) {\n    const tempPath = `/tmp/${Date.now()}_${value.fileName}`;\n    \n    items.push({\n      json: {\n        conversationId: conversationId,\n        originalName: value.fileName,\n        mimeType: value.mimeType,\n        size: value.fileSize || 0,\n        tempPath: tempPath,\n        binaryPropertyName: key,\n        uploadedAt: new Date().toISOString()\n      },\n      binary: {\n        file: value\n      }\n    });\n  }\n}\n\nreturn items;"
+      },
+      "id": "process-files",
+      "name": "Process Uploaded Files",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Aggregate all file metadata for response\nconst files = $input.all();\n\nreturn {\n  success: true,\n  uploadedFiles: files.map(item => ({\n    originalName: item.json.originalName,\n    mimeType: item.json.mimeType,\n    size: item.json.size,\n    tempPath: item.json.tempPath,\n    binaryPropertyName: item.json.binaryPropertyName\n  })),\n  count: files.length,\n  conversationId: files[0]?.json.conversationId\n};"
+      },
+      "id": "aggregate-response",
+      "name": "Aggregate File Metadata",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}"
+      },
+      "id": "respond-to-webhook",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [900, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Process Uploaded Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Uploaded Files": {
+      "main": [
+        [
+          {
+            "node": "Aggregate File Metadata",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate File Metadata": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-12-30T00:00:00.000Z",
+  "versionId": "1"
+}

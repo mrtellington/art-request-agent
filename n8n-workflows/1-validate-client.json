@@ -1,0 +1,109 @@
+{
+  "name": "Art Request - Validate Client",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "validate-client",
+        "options": {}
+      },
+      "id": "webhook-validate-client",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "validate-client-webhook"
+    },
+    {
+      "parameters": {
+        "url": "=https://fws09sh894.execute-api.us-east-1.amazonaws.com/beta/clients?client_name={{ encodeURIComponent($json.clientName) }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-KEY",
+              "value": "6OeLDR99972yoWmoazwPp7AMwUpn7RAY8MzQng52"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "call-commonsku-api",
+      "name": "Call CommonSKU API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.item.json;\n\nif (data.data && data.data.length > 0) {\n  const client = data.data[0];\n  return {\n    exists: true,\n    clientId: client.client_id,\n    clientName: client.client_name,\n    primaryContactEmail: client.primary_contact_email || null,\n    industryName: client.industry_name || null,\n    customerNumber: client.customer_number || null\n  };\n} else {\n  return {\n    exists: false,\n    clientName: \"Not Listed\"\n  };\n}"
+      },
+      "id": "process-response",
+      "name": "Process Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}"
+      },
+      "id": "respond-to-webhook",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [900, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Call CommonSKU API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call CommonSKU API": {
+      "main": [
+        [
+          {
+            "node": "Process Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Response": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-12-30T00:00:00.000Z",
+  "versionId": "1"
+}

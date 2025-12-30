@@ -1,0 +1,110 @@
+{
+  "name": "Art Request - Validate URL",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "validate-url",
+        "options": {}
+      },
+      "id": "webhook-validate-url",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "validate-url-webhook"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "sendHeaders": false,
+        "options": {
+          "redirect": {
+            "redirect": {
+              "followRedirects": true,
+              "maxRedirects": 3
+            }
+          },
+          "timeout": 10000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        },
+        "requestMethod": "HEAD"
+      },
+      "id": "check-url",
+      "name": "Check URL Accessibility",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $input.item.json;\nconst requestedUrl = $node[\"Webhook\"].json.url;\n\n// Check if URL is accessible (2xx or 3xx status codes)\nconst statusCode = response.statusCode || 0;\nconst isValid = statusCode >= 200 && statusCode < 400;\n\nlet validationType = 'unknown';\nlet message = '';\n\nif (statusCode === 0) {\n  validationType = 'error';\n  message = 'Unable to reach URL - connection timeout or network error';\n} else if (statusCode >= 200 && statusCode < 300) {\n  validationType = 'success';\n  message = 'URL is accessible';\n} else if (statusCode >= 300 && statusCode < 400) {\n  validationType = 'redirect';\n  message = 'URL redirects to another location';\n} else if (statusCode === 404) {\n  validationType = 'not_found';\n  message = 'URL not found (404)';\n} else if (statusCode === 403) {\n  validationType = 'forbidden';\n  message = 'Access forbidden (403)';\n} else if (statusCode >= 400 && statusCode < 500) {\n  validationType = 'client_error';\n  message = `Client error (${statusCode})`;\n} else if (statusCode >= 500) {\n  validationType = 'server_error';\n  message = `Server error (${statusCode})`;\n}\n\nreturn {\n  url: requestedUrl,\n  valid: isValid,\n  statusCode: statusCode,\n  validationType: validationType,\n  message: message,\n  contentType: response.headers?.['content-type'] || null,\n  contentLength: response.headers?.['content-length'] || null\n};"
+      },
+      "id": "process-validation",
+      "name": "Process Validation Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}"
+      },
+      "id": "respond-to-webhook",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [900, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Check URL Accessibility",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check URL Accessibility": {
+      "main": [
+        [
+          {
+            "node": "Process Validation Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Validation Result": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-12-30T00:00:00.000Z",
+  "versionId": "1"
+}
